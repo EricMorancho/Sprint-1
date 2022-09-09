@@ -7,6 +7,7 @@
 .padre{
     display: flex;
     flex-flow: column nowrap;
+    max-width: 1200px;
 }
 
 .header{
