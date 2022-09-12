@@ -1,0 +1,238 @@
+*{
+    padding: 10px;
+    box-sizing:border-box;
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+
+a{
+    color: grey;
+    text-decoration: none;
+}
+
+a:hover{
+    color: black;
+}
+
+.padre{
+    display: flex;
+    flex-flow: column nowrap;
+    max-width: 1200px;
+}
+
+.header{
+    background-image:url(../img/header.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-flow: column nowrap;
+    animation: moverArriba 1s ease-in;
+}
+    .menu{
+        display: flex;
+        flex-flow: row nowrap;
+        height: 100px;
+        align-items: center;
+        font-size: 0.75rem;
+    }
+        .logo{ 
+           flex: 1 1 auto;
+        }
+
+        #logojap{
+            height: 80px;
+            animation: moverArriba 2s ease-in;
+        }
+
+        .nav{
+            flex: 5 1 auto;
+        }
+
+        .social{
+            flex: 1 1 auto;
+        }
+
+        .texto-principal h1{
+            color: rgb(216, 117, 29);
+            font-size: 1.5rem;
+            font-weight: 400;
+            text-align: center;
+            opacity: 0.5;
+            animation: moverArriba 2s ease-in;
+        }
+
+.section{
+    display: flex;
+}
+
+    .articulos{
+        background-color: lightgray;
+        display: flex;
+        flex: 2 1 auto;
+        flex-flow: row wrap;
+    }
+
+        .article{
+            flex: 1 1 40%;
+            height: auto;
+            background-color: white;
+            border: 0.5rem solid lightgray;
+            animation: moverIzquierda 1s ease-in;
+        }
+
+        .article img{
+            width: 100%;
+            padding: 0;
+        }
+
+        .article h3{
+            background-color: rgb(200, 132, 144);
+            color: white;
+        }
+
+        .fecha{
+            color: yellow;
+            opacity: 0.7;
+            margin-top: -50px;
+        }
+
+        .texto{
+            columns: 60px 2;
+            color: rgb(98, 97, 97);
+        }
+
+        .navegacion{
+            flex: 1 1 100%;
+            height: auto;
+            text-align: center;
+            margin: -30px;
+            animation: moverArriba 1s ease-in;
+        }
+    
+    .aside{
+        background: lightgray;
+        border-left: 0.5rem solid white;
+        flex: 1 1 250rem;
+        flex-flow: column wrap;
+        animation: moverDerecha 1s ease-in;
+    }
+    
+        .publicidad{
+            height: 2rem;
+            text-align: center;
+
+        }
+
+    .pie{
+        height: auto;
+        color: grey;
+        text-align: center;
+        animation: moverArriba 1s ease-in;
+    }
+
+    .pie p{
+        margin-top: -40px;
+    }
+
+
+@media (max-width: 960px){
+    .section{
+        flex-direction: column;
+    }
+
+    .menu{
+        flex-direction: column;
+        height: auto;
+    }
+
+    .aside{
+        border-left: 0;
+        border-top: 0.5rem solid white;
+        flex: 1 1 20rem;
+    }
+
+    .navegacion{
+        margin: 0px;
+    }
+
+    .nav{
+        font-size: 11px;
+        margin-top: -30px;
+    }
+
+    .social{
+        font-size: 9px;
+        margin-top: -30px;
+    }
+}
+
+@media (max-width: 710px){
+    
+    .menu{
+        flex-direction: column;
+    }
+
+    #logojap{
+        width: 100%;
+        margin-top: -10px;
+        
+    }
+
+    .off{
+        display: none;
+    }
+
+    .nav{
+        width: 100%;
+        font-size: 17px;
+        margin-top: -40px;
+        text-align: center;
+    }
+
+    .social{
+        font-size: 14px;
+    }
+
+    .article{
+        flex: 1 1 100%;
+        flex-direction: column;
+    }
+}
+
+@keyframes moverArriba {
+    0%{
+        opacity: 0;
+        transform: translateY(100px);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes moverIzquierda {
+    0%{
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes moverDerecha{
+    0%{
+        opacity: 0;
+        transform: translateX(100px);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translate(0);
+    }
+}
