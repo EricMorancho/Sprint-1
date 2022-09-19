@@ -36,6 +36,7 @@ a:hover{
     background-size: cover;
     height: 250px;
     border-bottom: 0.5rem solid white;
+    animation: moverArriba 1s ease-in;
 }
 
     .logo{
@@ -45,6 +46,7 @@ a:hover{
     #logojap{
         height: 80px;
         text-align: left;
+        animation: moverArriba 2s ease-in;
     }
 
     .nav{
@@ -62,12 +64,14 @@ a:hover{
         font-weight: 400;
         text-align: center;
         opacity: 0.5;
+        animation: moverArriba 2s ease-in;
     }
 
 .article{
     text-align: left;
     background-color: white;
     height: 100%;
+    animation: moverIzquierda 1s ease-in;
 }
 
     .article img{
@@ -91,15 +95,12 @@ a:hover{
         color: rgb(98, 97, 97);
     }
 
-    .article a{
-        
-    }
-
 .aside{
     grid-column: 3 / 4;
     grid-row: 2 / 5;
     color: black;
     border-left: 0.5rem solid white;
+    animation: moverDerecha 1s ease-in;
 }
 
 .navegacion{
@@ -108,6 +109,7 @@ a:hover{
     color: black;
     padding: 0;
     font-size: 14.5px;
+    animation: moverArriba 1s ease-in;
 }
 
 .footer{
@@ -119,9 +121,9 @@ a:hover{
 
     .pie{
         margin-top: -40px;
+        animation: moverArriba 1s ease-in;
     }
    
-
 
     @media (max-width: 960px){
 
@@ -215,7 +217,6 @@ a:hover{
 
         .texto-principal h1{
             font-size: 1rem;
-            
         }
 
         .navegacion{
@@ -241,3 +242,38 @@ a:hover{
         }
     }
         
+    @keyframes moverArriba {
+        0%{
+            opacity: 0;
+            transform: translateY(100px);
+        }
+    
+        100%{
+            opacity: 1;
+            transform: translate(0);
+        }
+    }
+    
+    @keyframes moverIzquierda {
+        0%{
+            opacity: 0;
+            transform: translateX(-100px);
+        }
+    
+        100%{
+            opacity: 1;
+            transform: translate(0);
+        }
+    }
+    
+    @keyframes moverDerecha{
+        0%{
+            opacity: 0;
+            transform: translateX(100px);
+        }
+    
+        100%{
+            opacity: 1;
+            transform: translate(0);
+        }
+    }
